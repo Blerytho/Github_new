@@ -1,0 +1,56 @@
+{
+  "_version": 1,
+
+  "grpc": {
+    "host": "127.0.0.1",
+    "port": 50051
+  },
+
+  "persistence": {
+    "path": "_data"
+  },
+
+  "p2p": {
+    "blacklist": {
+      "defaultTtl": 6000,
+      "purgeInterval": 6000
+    },
+    "rendezvous": {
+      "webrtc": "/dns4/dns-r1.blockcollider.org/tcp/9090/ws/p2p-webrtc-star",
+      "websocket": "/dns4/dns-r1.blockcollider.org/tcp/9091/ws/p2p-websocket-star"
+    },
+    "stats": {
+      "enabled": true,
+      "interval": 10
+    }
+  },
+
+  "rovers": {
+    "eth": {
+      "altBootNodes": [
+        {
+          "address": "52.74.57.123",
+          "udpPort": 30303
+        }
+      ]
+    },
+
+    "lsk": {
+      "ssl": true,
+      "randomPeer": true,
+      "testnet": false,
+      "port": "443",
+      "bannedPeers": []
+    }
+  },
+
+  "sentry": {
+    "enabled": true,
+    "url": "https://8f889605ace248d88784796a32903c9e@sentry.io/1202649"
+  },
+
+  "server": {
+    "port": 3000,
+    "logCalls": false
+  }
+}
